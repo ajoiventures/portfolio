@@ -140,7 +140,7 @@ window.PROJECTS = [
     },
     mainLink: {
       label: "Main Page",
-      href: "file:///C:/Projects/BTR/static_research_hub/index.html",
+      href: "https://economic-development.vercel.app",
     },
     ticketLink: {
       label: "Ticketing",
@@ -271,7 +271,7 @@ window.PROJECTS = [
     },
     mainLink: {
       label: "Main Page",
-      href: "file:///C:/Projects/Urban/urban-analytics-atlas.html",
+      href: "https://ajoiventures.github.io/Urban-Analytics/",
     },
     ticketLink: {
       label: "Ticketing",
@@ -412,7 +412,7 @@ window.PROJECTS = [
     },
     mainLink: {
       label: "Main Page",
-      href: "http://localhost:5173/",
+      href: "https://solocapoeira.vercel.app",
     },
     ticketLink: {
       label: "Ticketing",
@@ -592,7 +592,7 @@ window.PROJECTS = [
     },
     mainLink: {
       label: "Main Page",
-      href: "file:///C:/Projects/Tools/index.html",
+      href: "https://ajoiventures.github.io/Tools/",
     },
     ticketLink: null,
     folderLink: {
