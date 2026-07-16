@@ -330,7 +330,7 @@ window.PROJECTS = [
     },
     mainLink: {
       label: "Main Page",
-      href: "http://localhost:4322/",
+      href: "https://ajoiventures.github.io/Capoeria-Movement/",
     },
     ticketLink: {
       label: "Ticketing",
@@ -500,7 +500,7 @@ window.PROJECTS = [
     },
     mainLink: {
       label: "Main Page",
-      href: "file:///C:/Users/Paul%20Irumudomon/OneDrive/Desktop/Codex/Capoeira/local_site/output/index.html",
+      href: "https://ajoiventures.github.io/Angola-Industry-/",
     },
     ticketLink: {
       label: "Ticketing",
@@ -869,7 +869,7 @@ window.PROJECTS = [
     status: "In development",
     mainLink: {
       label: "Main Page",
-      href: "file:///C:/Projects/Politics/anna_eskamani_commitments.html",
+      href: "https://ajoiventures.github.io/anna/",
     },
     ticketLink: null,
     folderLink: {
@@ -907,7 +907,7 @@ window.PROJECTS = [
     },
     mainLink: {
       label: "Main Page",
-      href: "file:///C:/Projects/Tools/Form%20Tool/Tree%20Service%20Form/tree_service_approval.html",
+      href: "https://ajoiventures.github.io/Tools/Form%20Tool/Tree%20Service%20Form/tree_service_approval.html",
     },
     ticketLink: null,
     folderLink: {

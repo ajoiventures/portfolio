@@ -1839,3 +1839,63 @@ code {
   .library-domain,
   .category-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Collapsible project rows ───────────────────────────────────────────────── */
+.project-summary-row {
+  cursor: pointer;
+  user-select: none;
+}
+.project-summary-row:hover td {
+  background: rgba(31, 93, 87, 0.035);
+}
+.toggle-cell {
+  text-align: center;
+  width: 2rem;
+}
+.toggle-icon {
+  font-size: 0.6rem;
+  color: var(--eh-teal);
+  opacity: 0.55;
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+.project-summary-row[aria-expanded="true"] .toggle-icon {
+  transform: rotate(180deg);
+}
+.project-detail-row > td {
+  padding: 0;
+  border-top: none;
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem 1.75rem;
+  background: color-mix(in srgb, var(--eh-bg) 60%, var(--eh-paper));
+  border-bottom: 2px solid var(--eh-line);
+}
+.detail-section h4 {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--eh-teal);
+  margin: 0 0 0.45rem;
+}
+.detail-section p {
+  font-size: 0.82rem;
+  color: var(--eh-ink);
+  line-height: 1.5;
+  margin: 0;
+}
+.detail-section .spec-list,
+.detail-section .stack-list,
+.detail-section .tool-list,
+.detail-section .innovation-list {
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--eh-ink);
+}
+}

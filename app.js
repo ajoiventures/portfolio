@@ -200,21 +200,59 @@ function searchableText(project) {
 function render(projects) {
   const rows = document.getElementById("project-rows");
   if (!rows) return;
-  rows.innerHTML = projects.map((project, index) => `
-    <tr>
-      <td class="row-number" data-label="#">${String(index + 1).padStart(2, "0")}</td>
-      <td data-label="Project">${projectIdentity(project)}</td>
-      <td data-label="Links">${linkCell(project)}</td>
-      <td data-label="Related Library">${relatedLibraryLinks(project)}</td>
-      <td data-label="Status"><span class="status ${slugStatus(project.status)}">${project.status}</span></td>
-      <td data-label="Development">${developmentCell(project)}</td>
-      <td data-label="Synopsis">${project.synopsis}</td>
-      <td data-label="Technical Spec">${listItems(project.spec, "spec-list")}</td>
-      <td data-label="Full Tech Stack">${listItems(project.stack, "stack-list")}</td>
-      <td data-label="Tools">${listItems(project.tools, "tool-list")}</td>
-      <td data-label="Innovations">${listItems(project.innovations, "innovation-list")}</td>
-    </tr>
-  `).join("");
+  rows.innerHTML = projects.map((project, index) => {
+    const detailId = `project-detail-${index}`;
+    return `
+      <tr class="project-summary-row" data-detail="${detailId}" aria-expanded="false">
+        <td class="row-number">${String(index + 1).padStart(2, "0")}</td>
+        <td>${projectIdentity(project)}</td>
+        <td>${linkCell(project)}</td>
+        <td><span class="status ${slugStatus(project.status)}">${project.status}</span></td>
+        <td>${developmentCell(project)}</td>
+        <td class="toggle-cell"><span class="toggle-icon">▼</span></td>
+      </tr>
+      <tr class="project-detail-row" id="${detailId}" hidden>
+        <td colspan="6">
+          <div class="detail-grid">
+            <div class="detail-section">
+              <h4>Synopsis</h4>
+              <p>${project.synopsis}</p>
+            </div>
+            <div class="detail-section">
+              <h4>Technical Spec</h4>
+              ${listItems(project.spec, "spec-list")}
+            </div>
+            <div class="detail-section">
+              <h4>Full Tech Stack</h4>
+              ${listItems(project.stack, "stack-list")}
+            </div>
+            <div class="detail-section">
+              <h4>Tools</h4>
+              ${listItems(project.tools, "tool-list")}
+            </div>
+            <div class="detail-section">
+              <h4>Innovations</h4>
+              ${listItems(project.innovations, "innovation-list")}
+            </div>
+            <div class="detail-section">
+              <h4>Related Library</h4>
+              ${relatedLibraryLinks(project)}
+            </div>
+          </div>
+        </td>
+      </tr>
+    `;
+  }).join("");
+
+  rows.querySelectorAll(".project-summary-row").forEach((row) => {
+    row.addEventListener("click", () => {
+      const detailRow = document.getElementById(row.dataset.detail);
+      const expanded = row.getAttribute("aria-expanded") === "true";
+      row.setAttribute("aria-expanded", String(!expanded));
+      detailRow.hidden = expanded;
+      row.querySelector(".toggle-icon").textContent = expanded ? "▼" : "▲";
+    });
+  });
 }
 
 // ── Render: Tier One mini-cards (overview page) ───────────────────────────────
