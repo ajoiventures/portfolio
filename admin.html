@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin - Paul Irumudomon</title>
+    <meta name="description" content="Edit and save active project links for the local project portfolio." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%23111a27'/><text x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='700' font-size='13' fill='%23d5ae5b'>PI</text></svg>" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="admin">
+
+    <aside class="sidebar" aria-label="Portfolio navigation">
+      <a class="brand" href="index.html" aria-label="Paul Irumudomon Portfolio home">
+        <span class="brand-name">Ehimare</span>
+        <small class="brand-sub">Active Work Registry</small>
+      </a>
+      <nav>
+        <a href="index.html"><span aria-hidden="true">01</span>Overview</a>
+        <a href="showcase.html"><span aria-hidden="true">02</span>Showcase</a>
+        <a href="projects.html"><span aria-hidden="true">03</span>Active Projects</a>
+        <a href="library.html"><span aria-hidden="true">04</span>Library</a>
+      </nav>
+      <a class="dev-link" href="developer.html">
+        <span class="dev-link-label">Developer</span>
+        <span class="dev-link-desc">Ticket status &amp; build links</span>
+      </a>
+      <a class="dev-link active" href="admin.html">
+        <span class="dev-link-label">Admin</span>
+        <span class="dev-link-desc">Edit saved project links</span>
+      </a>
+      <div class="owner">
+        <span>PI</span>
+        <div>
+          <strong>Paul Irumudomon</strong>
+          <small>Owner / Builder</small>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+
+      <div class="page-hero">
+        <div class="page-hero-text">
+          <p class="section-label">Local Admin</p>
+          <h1>Project Links</h1>
+          <p class="lede">
+            Paste and save the main page, ticketing page, and main local folder
+            for each active project. Saved edits override the defaults on this browser.
+          </p>
+        </div>
+        <div class="page-hero-stat">
+          <strong>3</strong>
+          <span>links per project</span>
+        </div>
+      </div>
+
+      <form class="admin-panel" id="admin-link-form">
+        <div class="admin-toolbar">
+          <div>
+            <h2>Editable Link Registry</h2>
+            <p>Use full URLs such as <code>http://localhost:3030/</code> or <code>file:///C:/Projects/Example/</code>.</p>
+          </div>
+          <div class="admin-actions">
+            <button type="submit">Save links</button>
+            <button type="button" id="admin-reset" class="button-secondary">Reset saved edits</button>
+          </div>
+        </div>
+        <p class="admin-status" id="admin-save-status" hidden></p>
+        <div class="admin-link-grid" id="admin-link-grid"></div>
+      </form>
+
+      <section class="admin-panel" aria-label="JSON import and export">
+        <div class="admin-toolbar">
+          <div>
+            <h2>Import / Export</h2>
+            <p>Keep a backup of your saved links, or paste a saved JSON map back in.</p>
+          </div>
+          <button type="button" id="admin-import">Import pasted JSON</button>
+        </div>
+        <textarea id="admin-json" class="admin-json" spellcheck="false"></textarea>
+      </section>
+
+    </main>
+
+    <script src="./projects.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

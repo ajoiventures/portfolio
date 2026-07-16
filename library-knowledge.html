@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Knowledge &amp; Research — Library — Paul Irumudomon</title>
+    <meta name="description" content="Knowledge, learning, and research workspace library — knowledge systems, leadership, and place-based research." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%23111a27'/><text x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='700' font-size='13' fill='%23d5ae5b'>PI</text></svg>" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="library-knowledge">
+
+    <aside class="sidebar" aria-label="Portfolio navigation">
+      <a class="brand" href="index.html" aria-label="Paul Irumudomon Portfolio home">
+        <span class="brand-name">Ehimare</span>
+        <small class="brand-sub">Active Work Registry</small>
+      </a>
+      <nav>
+        <a href="index.html"><span aria-hidden="true">01</span>Overview</a>
+        <a href="showcase.html"><span aria-hidden="true">02</span>Showcase</a>
+        <a href="projects.html"><span aria-hidden="true">03</span>Active Projects</a>
+        <a href="library.html" class="active"><span aria-hidden="true">04</span>Library</a>
+      </nav>
+      <nav class="sub-nav" aria-label="Library domains">
+        <a href="library.html" class="sub-nav-item">All Domains</a>
+        <a href="library-economic.html" class="sub-nav-item">Economic Dev.</a>
+        <a href="library-operating.html" class="sub-nav-item">Operating Systems</a>
+        <a href="library-knowledge.html" class="sub-nav-item active">Knowledge &amp; Research</a>
+        <div class="sub-nav-subcats">
+          <a href="#knowledge-systems"    class="sub-nav-subcat">Knowledge Systems</a>
+          <a href="#learning-and-leadership" class="sub-nav-subcat">Learning &amp; Leadership</a>
+          <a href="#research-and-place"   class="sub-nav-subcat">Research &amp; Place</a>
+        </div>
+      </nav>
+      <a class="dev-link" href="developer.html">
+        <span class="dev-link-label">Developer</span>
+        <span class="dev-link-desc">Ticket status &amp; build links</span>
+      </a>
+      <a class="dev-link" href="admin.html">
+        <span class="dev-link-label">Admin</span>
+        <span class="dev-link-desc">Edit saved project links</span>
+      </a>
+      <div class="owner">
+        <span>PI</span>
+        <div>
+          <strong>Paul Irumudomon</strong>
+          <small>Owner / Builder</small>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+
+      <div class="page-hero">
+        <div class="page-hero-text">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="library.html">Library</a>
+            <span aria-hidden="true">›</span>
+            <span>Knowledge &amp; Research</span>
+          </nav>
+          <p class="section-label">Domain</p>
+          <h1>Knowledge &amp; Research</h1>
+          <p class="lede">
+            Knowledge systems, leadership pipeline, and place-based research
+            workspaces — the intellectual infrastructure behind the build.
+          </p>
+        </div>
+        <div class="page-hero-stat">
+          <strong id="domain-count">0</strong>
+          <span>workspaces</span>
+        </div>
+      </div>
+
+      <div class="library-search-wrap">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M13 13l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <input id="library-search" type="search" placeholder="Search workspaces…" aria-label="Search library" />
+      </div>
+
+      <div class="library-grid" id="library-grid"></div>
+
+    </main>
+
+    <script src="./projects.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

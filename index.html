@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paul Irumudomon — Project Portfolio</title>
+    <meta name="description" content="Paul Irumudomon's active project registry — published MVPs, active builds, and supporting workspaces." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%23111a27'/><text x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='700' font-size='13' fill='%23d5ae5b'>PI</text></svg>" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="overview">
+
+    <aside class="sidebar" aria-label="Portfolio navigation">
+      <a class="brand" href="index.html" aria-label="Paul Irumudomon Portfolio home">
+        <span class="brand-name">Ehimare</span>
+        <small class="brand-sub">Active Work Registry</small>
+      </a>
+      <nav>
+        <a href="index.html" class="active">
+          <span aria-hidden="true">01</span>Overview
+        </a>
+        <a href="showcase.html">
+          <span aria-hidden="true">02</span>Showcase
+        </a>
+        <a href="projects.html">
+          <span aria-hidden="true">03</span>Active Projects
+        </a>
+        <a href="library.html">
+          <span aria-hidden="true">04</span>Library
+        </a>
+      </nav>
+      <a class="dev-link" href="developer.html">
+        <span class="dev-link-label">Developer</span>
+        <span class="dev-link-desc">Ticket status &amp; build links</span>
+      </a>
+      <a class="dev-link" href="admin.html">
+        <span class="dev-link-label">Admin</span>
+        <span class="dev-link-desc">Edit saved project links</span>
+      </a>
+      <div class="owner">
+        <span>PI</span>
+        <div>
+          <strong>Paul Irumudomon</strong>
+          <small>Owner / Builder</small>
+        </div>
+      </div>
+    </aside>
+
+    <main id="top">
+
+      <section class="hero" id="overview">
+        <div>
+          <p class="section-label">Active Work Registry</p>
+          <h1>Project Portfolio</h1>
+          <p class="lede">
+            A living command center for current work — what each project is,
+            how it is built, and where to open it or its ticket tracker.
+          </p>
+        </div>
+        <div class="updated">
+          <span aria-hidden="true">CAL</span>
+          <time id="last-updated">—</time>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Project summary">
+        <article data-stage="published">
+          <span class="stat-icon published">P</span>
+          <strong id="published-count">0</strong>
+          <p>Published MVPs</p>
+          <small>Completed, live, publicly accessible</small>
+        </article>
+        <article data-stage="active">
+          <span class="stat-icon teal">A</span>
+          <strong id="active-count">0</strong>
+          <p>Active projects</p>
+          <small>All active workstreams tracked</small>
+        </article>
+        <article data-stage="development">
+          <span class="stat-icon blue">D</span>
+          <strong id="development-count">0</strong>
+          <p>In development</p>
+          <small>Build phase, active implementation</small>
+        </article>
+        <article data-stage="ticketing">
+          <span class="stat-icon gold">T</span>
+          <strong id="ticket-count">0</strong>
+          <p>Ticketing built</p>
+          <small>Tracker or ticket board exists</small>
+        </article>
+        <article data-stage="needsTicketing">
+          <span class="stat-icon clay">N</span>
+          <strong id="needs-ticket-count">0</strong>
+          <p>Need ticketing</p>
+          <small>Tracker still needs to be built</small>
+        </article>
+      </section>
+
+      <!-- ── Published Work preview ─────────────────────────── -->
+      <section class="overview-section" aria-label="Published work preview">
+        <div class="overview-section-header">
+          <div>
+            <p class="section-label">Published Work</p>
+            <h2>Live MVPs</h2>
+          </div>
+          <a href="showcase.html" class="section-link">All published work →</a>
+        </div>
+        <div class="showcase-grid" id="showcase-preview"></div>
+      </section>
+
+      <!-- ── Active Projects mini-cards ──────────────────────── -->
+      <section class="overview-section" aria-label="Active development">
+        <div class="overview-section-header">
+          <div>
+            <p class="section-label">Active Development</p>
+            <h2>Active Projects</h2>
+          </div>
+          <a href="projects.html" class="section-link">Full specs & details →</a>
+        </div>
+        <div class="mini-grid" id="mini-projects"></div>
+      </section>
+
+    </main>
+
+    <script src="./projects.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
