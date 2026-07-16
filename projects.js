@@ -849,6 +849,36 @@ window.PROJECTS = [
     ],
   },
   {
+    name: "Politics",
+    tier: "Active Project",
+    kind: "Civic political research",
+    thread: null,
+    synopsis:
+      "Civic political research hub — Anna Eskamani for Orlando Mayor full platform commitments tracker. Monitors policy positions, campaign promises, and civic priorities for local Orlando electoral intelligence.",
+    spec: [
+      "Platform commitments tracker",
+      "Policy position database",
+      "Orlando mayoral race intelligence",
+    ],
+    stack: ["HTML", "CSS", "JavaScript", "Static site"],
+    tools: ["VS Code", "Browser QA"],
+    innovations: [
+      "Structured civic commitment tracking",
+      "Local Orlando electoral intelligence layer",
+    ],
+    status: "In development",
+    mainLink: {
+      label: "Main Page",
+      href: "file:///C:/Projects/Politics/anna_eskamani_commitments.html",
+    },
+    ticketLink: null,
+    folderLink: {
+      label: "Main Folder",
+      href: "file:///C:/Projects/Politics/",
+      path: "C:\\Projects\\Politics",
+    },
+  },
+  {
     name: "Tree Service Form",
     tier: "Active Project",
     kind: "Client service form system",
