@@ -220,6 +220,26 @@ window.PROJECTS = [
         label: "Operating System",
         href: "file:///C:/Projects/BTR/PROJECT_OPERATING_SYSTEM.md",
       },
+      {
+        label: "A063 — Ownership Intel: The Drive",
+        href: "file:///C:/Projects/BTR/static_research_hub/deliverables/A063.html",
+      },
+      {
+        label: "A066 — Business Intelligence Hub",
+        href: "file:///C:/Projects/BTR/static_research_hub/deliverables/A066.html",
+      },
+      {
+        label: "A067 — Permit Intelligence Platform",
+        href: "file:///C:/Projects/BTR/static_research_hub/deliverables/A067.html",
+      },
+      {
+        label: "A068 — Ontology Insights",
+        href: "file:///C:/Projects/BTR/static_research_hub/deliverables/A068.html",
+      },
+      {
+        label: "A069 — Economic Context Intelligence",
+        href: "file:///C:/Projects/BTR/static_research_hub/deliverables/A069.html",
+      },
     ],
   },
   {
@@ -774,6 +794,57 @@ window.PROJECTS = [
       {
         label: "Vault Tickets",
         href: "file:///C:/Projects/Black%20river/BlackRiver_Vault/04-PROJECTS/BlackRiver%20Development%20OS/tickets/TICKET_INDEX.md",
+      },
+    ],
+  },
+  {
+    name: "Insurance",
+    tier: "Active Project",
+    kind: "Client quote management tool",
+    thread: null,
+    synopsis:
+      "A static site for managing client insurance quotes — individual client pages, quote comparisons, a full-terms data bank, quote request log, and client summary dashboard. Deployed on GitHub Pages.",
+    spec: [
+      "Client quote pages (Asher, Birgham, Cider Mill)",
+      "Quote Comparison tool",
+      "Full Terms Data Bank",
+      "Quote Request Log",
+      "Client Summary dashboard",
+    ],
+    stack: ["HTML", "CSS", "JavaScript", "GitHub Pages", "Static site"],
+    tools: ["VS Code", "GitHub Pages", "Browser QA"],
+    innovations: [
+      "Client-facing insurance quote delivery via static site",
+      "Structured terms data bank for comparison",
+      "Logged quote request history",
+    ],
+    status: "In development",
+    mainLink: {
+      label: "Main Page",
+      href: "https://ajoiventures.github.io/Insurance/",
+    },
+    ticketLink: null,
+    folderLink: {
+      label: "GitHub Repo",
+      href: "https://github.com/ajoiventures/Insurance",
+      path: "C:\\Projects\\Insurance Quote",
+    },
+    resourceLinks: [
+      {
+        label: "Quote Comparison",
+        href: "https://ajoiventures.github.io/Insurance/Quote%20Comparison.html",
+      },
+      {
+        label: "Client Summary",
+        href: "https://ajoiventures.github.io/Insurance/Client%20Summary.html",
+      },
+      {
+        label: "Full Terms Data Bank",
+        href: "https://ajoiventures.github.io/Insurance/Full%20Terms%20Data%20Bank.html",
+      },
+      {
+        label: "Quote Request Log",
+        href: "https://ajoiventures.github.io/Insurance/Quote%20Request%20Log.html",
       },
     ],
   },
