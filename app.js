@@ -1,5 +1,20 @@
 // ── Page detection ────────────────────────────────────────────────────────────
 const PAGE = document.body.dataset.page;
+
+// True when served over HTTPS (GitHub Pages / Vercel) — file:// and localhost links won't open
+const IS_DEPLOYED = window.location.protocol === "https:";
+
+function isLocalLink(href) {
+  if (!href) return false;
+  return href.startsWith("file:///") || href.startsWith("localhost:") || href.startsWith("http://localhost") || href.startsWith("http://127.0.0.1");
+}
+
+function safeLink(href, label, className) {
+  if (IS_DEPLOYED && isLocalLink(href)) {
+    return `<span class="link-button ${className} local-only" title="Local dev link — open on your machine">${label} <small>local</small></span>`;
+  }
+  return `<a class="link-button ${className}" href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+}
 const LINK_OVERRIDE_STORAGE_KEY = "projectPortfolio.linkOverrides.v1";
 
 function projectKey(project) {
@@ -131,15 +146,15 @@ function developmentCell(project) {
 }
 
 function linkCell(project) {
-  const main = `<a class="link-button" href="${project.mainLink.href}">${project.mainLink.label}</a>`;
+  const main = safeLink(project.mainLink.href, project.mainLink.label, "");
   const ticket = project.ticketLink
-    ? `<a class="link-button secondary" href="${project.ticketLink.href}">${project.ticketLink.label}</a>`
+    ? safeLink(project.ticketLink.href, project.ticketLink.label, "secondary")
     : `<span class="missing-link">Needs to be built</span>`;
   const folder = project.folderLink?.href
-    ? `<a class="link-button folder" href="${project.folderLink.href}">${project.folderLink.label}</a>`
+    ? safeLink(project.folderLink.href, project.folderLink.label, "folder")
     : `<span class="missing-link">Main folder needed</span>`;
   const resources = (project.resourceLinks || [])
-    .map((link) => `<a class="link-button resource" href="${link.href}">${link.label}</a>`)
+    .map((link) => safeLink(link.href, link.label, "resource"))
     .join("");
   return `<div class="links">${main}${ticket}${folder}${resources}</div>`;
 }

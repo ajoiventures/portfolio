@@ -1127,6 +1127,19 @@ td { line-height: 1.55; font-size: 0.92rem; }
 
 .link-button.secondary { border-color: var(--eh-accent); color: var(--eh-accent); }
 .missing-link { border-color: var(--eh-warn); color: var(--eh-warn); }
+.link-button.local-only {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+  border-style: dashed;
+}
+.link-button.local-only small {
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-left: 0.35rem;
+  opacity: 0.7;
+}
 
 .link-button:hover, .link-button:focus-visible {
   background: var(--eh-teal);
